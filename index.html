@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío Matemático</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Desafío Matemático</h1>
+        <p>Cuatro ejercicios resueltos con JavaScript</p>
+    </header>
+
+    <main>
+
+        <section class="ejercicio">
+            <h2>01. El pago de los panes</h2>
+            <p>
+                Beremiz y su amigo se encuentran con un jeque en el desierto.
+                Beremiz lleva 5 panes y su amigo lleva 3. Comparten la comida
+                en partes iguales entre los tres y, al terminar, el jeque les
+                entrega 8 monedas de oro. Calcula el reparto justo según los
+                trozos de pan que aportó cada viajero.
+            </p>
+
+            <label for="panes1">Panes de Beremiz:</label>
+            <input type="number" id="panes1" min="0" step="1" value="5">
+
+            <label for="panes2">Panes del amigo:</label>
+            <input type="number" id="panes2" min="0" step="1" value="3">
+
+            <label for="monedasPanes">Monedas del jeque:</label>
+            <input type="number" id="monedasPanes" min="0" step="1" value="8">
+
+            <button onclick="calcularPanes()">Calcular reparto justo</button>
+
+            <p id="resultadoPanes" class="resultado"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>02. Ganancia del comerciante</h2>
+            <p>
+                Ingresa el costo de cada producto, la cantidad comprada y
+                el precio de venta para calcular el costo total, los ingresos,
+                la ganancia o pérdida y el porcentaje de ganancia.
+            </p>
+
+            <label for="costo">Costo de cada producto:</label>
+            <input type="number" id="costo" min="0" step="any" value="3">
+
+            <label for="cantidad">Cantidad de productos:</label>
+            <input type="number" id="cantidad" min="1" step="1" value="10">
+
+            <label for="precio">Precio de venta por producto:</label>
+            <input type="number" id="precio" min="0" step="any" value="4.2">
+
+            <button onclick="calcularGanancia()">Calcular ganancia</button>
+            <button onclick="limpiarGanancia()">Limpiar</button>
+
+            <p id="resultadoGanancia" class="resultado"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>03. Ecuación cuadrática</h2>
+            <p>
+                Resuelve una ecuación de la forma ax² + bx + c = 0
+                introduciendo sus tres coeficientes.
+            </p>
+
+            <label for="a">Coeficiente a:</label>
+            <input type="number" id="a" step="any" value="1">
+
+            <label for="b">Coeficiente b:</label>
+            <input type="number" id="b" step="any" value="-5">
+
+            <label for="c">Coeficiente c:</label>
+            <input type="number" id="c" step="any" value="6">
+
+            <button onclick="resolverEcuacion()">Resolver ecuación</button>
+
+            <p id="resultadoEcuacion" class="resultado"></p>
+        </section>
+
+        <section class="ejercicio">
+            <h2>04. Estimación de π (pi)</h2>
+            <p>
+                Aproxima el valor de π mediante una serie matemática.
+                Cuantas más iteraciones utilices, más se acercará el resultado
+                al valor real.
+            </p>
+
+            <label for="iteraciones">Número de iteraciones:</label>
+            <input type="number" id="iteraciones" min="1" max="1000000" step="1" value="10000">
+
+            <button onclick="estimarPi()">Estimar π</button>
+
+            <p id="resultadoPi" class="resultado"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Desafío de Programación Web I</p>
+    </footer>
+
+</body>
+</html>
